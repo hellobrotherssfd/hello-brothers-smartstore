@@ -123,3 +123,21 @@ function escapeHtml(text) {
   div.textContent = text;
   return div.innerHTML;
 }
+// ===== MANUAL REFRESH BUTTON =====
+const refreshBtn = document.getElementById('refreshBtn');
+if (refreshBtn) {
+  refreshBtn.addEventListener('click', async () => {
+    refreshBtn.textContent = '🔄 Refreshing...';
+    // Force reload by adding timestamp to avoid cache
+    const freshUrl = SHEET_CSV_URL + '&t=' + Date.now();
+    try {
+      const res = await fetch(freshUrl);
+      await res.text();
+      refreshBtn.textContent = '✅ Updated!';
+      setTimeout(() => { refreshBtn.textContent = '🔄 Refresh Data'; }, 2000);
+    } catch (e) {
+      refreshBtn.textContent = '❌ Failed';
+      setTimeout(() => { refreshBtn.textContent = '🔄 Refresh Data'; }, 2000);
+    }
+  });
+}
