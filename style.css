@@ -285,3 +285,94 @@ footer {
   overflow: hidden;
   border: 1px solid #1f1f1f;
 }
+/* ===== CHECK STATUS FORM ===== */
+.status-form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.status-form input {
+  padding: 16px;
+  border-radius: 12px;
+  border: 1.5px solid #2a2a2a;
+  background: #141414;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.status-form input:focus {
+  border-color: #00d4ff;
+}
+
+.status-form button {
+  padding: 16px;
+  border-radius: 12px;
+  border: none;
+  background: #00d4ff;
+  color: #0a0a0a;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.status-form button:active {
+  transform: scale(0.98);
+}
+
+.status-result {
+  max-width: 500px;
+  margin: 24px auto 0;
+  padding: 24px;
+  background: #141414;
+  border: 1px solid #1f1f1f;
+  border-radius: 14px;
+  display: none;
+}
+
+.status-result.show {
+  display: block;
+}
+
+.status-result h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #00d4ff;
+  text-align: center;
+}
+
+.status-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #1f1f1f;
+  font-size: 14px;
+}
+
+.status-row:last-child {
+  border-bottom: none;
+}
+
+.status-row .label {
+  color: #a0a0a0;
+}
+
+.status-row .value {
+  color: #ffffff;
+  font-weight: 600;
+  text-align: right;
+  max-width: 60%;
+}
+
+.status-error {
+  text-align: center;
+  color: #ff6b6b;
+  font-size: 15px;
+  padding: 20px;
+}
