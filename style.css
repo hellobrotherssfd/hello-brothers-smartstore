@@ -376,3 +376,17 @@ footer {
   font-size: 15px;
   padding: 20px;
 }
+/* ===== STATUS SECTION HIGHLIGHT ===== */
+#status {
+  background: linear-gradient(180deg, #0a0a0a 0%, #111111 100%);
+  padding: 60px 20px 50px;
+}
+
+#status .section-title {
+  color: #00d4ff;
+  font-size: 26px;
+}
+
+#status .section-subtitle {
+  color: #c0c0c0;
+}
