@@ -79,9 +79,12 @@ a {
 .hero {
   padding: 80px 20px 60px;
   text-align: center;
-  background: radial-gradient(circle at top, #1a1a1a 0%, #0a0a0a 70%);
+  background: 
+    linear-gradient(rgba(10, 10, 10, 0.88), rgba(10, 10, 10, 0.95)),
+    url('logo.png') center/280px no-repeat,
+    radial-gradient(circle at top, #1a1a1a 0%, #0a0a0a 70%);
+  position: relative;
 }
-
 .hero h1 {
   font-size: 32px;
   font-weight: 800;
